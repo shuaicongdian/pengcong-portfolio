@@ -19,6 +19,7 @@
   const person = content.person;
   const hero = content.hero;
   const work = content.works;
+  const mulan = content.mulan;
   const aiProjects = content.aiProjects;
   const videoCase = aiProjects.videoCase;
   const gameCase = aiProjects.gameCase;
@@ -39,6 +40,9 @@
   setText("[data-work-kicker]", work.kicker);
   setText("[data-work-title]", work.title);
   setText("[data-work-intro]", work.intro);
+  setText("[data-mulan-kicker]", mulan.kicker);
+  setText("[data-mulan-title]", mulan.title);
+  setText("[data-mulan-subtitle]", mulan.subtitle);
   setText("[data-ai-kicker]", aiProjects.kicker);
   setText("[data-ai-title]", aiProjects.title);
   setText("[data-ai-intro]", aiProjects.intro);
@@ -240,6 +244,56 @@
         `;
       })
       .join("");
+  }
+
+  const mulanFeature = $("[data-mulan-feature]");
+  if (mulanFeature) {
+    const filmAction = mulan.videoUrl
+      ? `<button class="button button--primary" type="button" data-video-open="0">${mulan.videoLabel || "站内观看全片"} <span>▶</span></button>`
+      : "";
+    mulanFeature.innerHTML = `
+      <div class="mulan-lead">
+        <figure class="mulan-lead__image">
+          <img src="${mulan.posterUrl}" alt="${mulan.title}剧照" />
+          <figcaption><span>FEATURE STILL / 09:23</span><span>1920 × 1080</span></figcaption>
+        </figure>
+
+        <div class="mulan-lead__copy">
+          <p class="mulan-label">GRADUATION DOCUMENTARY</p>
+          <h3>${mulan.title}</h3>
+          <p>${mulan.intro}</p>
+          <div class="mulan-stats">
+            ${mulan.stats.map((stat) => `
+              <div>
+                <strong>${stat.value}</strong>
+                <span>${stat.label}</span>
+                <small>${stat.note}</small>
+              </div>
+            `).join("")}
+          </div>
+          <div class="mulan-actions">
+            ${filmAction}
+            <a class="button button--text" href="${mulan.bilibili}" target="_blank" rel="noreferrer">Bilibili 观看 <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mulan-gallery">
+        <div class="mulan-gallery__head">
+          <p>FILM STILLS / 影片截图</p>
+          <span>${String(mulan.stills.length).padStart(2, "0")} FRAMES</span>
+        </div>
+        <div class="mulan-gallery__grid">
+          ${mulan.stills.map((still, index) => `
+            <a class="mulan-still mulan-still--${(index % 5) + 1}" href="${still.src}" target="_blank" rel="noreferrer">
+              <img src="${still.src}" alt="${still.alt}" loading="lazy" />
+              <span class="mulan-still__index">${String(index + 1).padStart(2, "0")}</span>
+              <span class="mulan-still__time">${still.time}</span>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    `;
   }
 
   const videoModal = $("[data-video-modal]");

@@ -2260,6 +2260,52 @@ h4 {
   animation: pulse 1.8s ease infinite;
 }
 
+.game-case__header-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  margin-top: 25px;
+}
+
+.game-case__header-actions .game-case__status {
+  margin-top: 0;
+}
+
+.game-case__play {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  border: 1px solid var(--white);
+  background: var(--orange);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 850;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 220ms var(--ease);
+}
+
+.game-case__play:hover {
+  background: var(--acid);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.game-case__play span {
+  font-family: var(--font-mono);
+}
+
+.game-case__header-actions small {
+  max-width: 210px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 9px;
+  line-height: 1.5;
+  text-align: right;
+}
+
 .game-case__overview {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(330px, 0.82fr);
@@ -3586,6 +3632,11 @@ body.modal-open {
   .game-case__status {
     margin-top: 12px;
     justify-self: start;
+  }
+
+  .game-case__header-actions {
+    align-items: flex-start;
+    margin-top: 0;
   }
 
   .game-case__overview {

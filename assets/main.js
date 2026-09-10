@@ -501,7 +501,15 @@
           <h3>${gameCase.title}</h3>
           <p class="game-case__subtitle">${gameCase.subtitle}</p>
         </div>
-        <span class="game-case__status">${gameCase.status}</span>
+        <div class="game-case__header-actions">
+          <span class="game-case__status">${gameCase.status}</span>
+          ${
+            gameCase.playUrl
+              ? `<a class="game-case__play" href="${gameCase.playUrl}" target="_blank" rel="noreferrer">${gameCase.playLabel || "在线试玩"} <span>↗</span></a>`
+              : ""
+          }
+          ${gameCase.playNote ? `<small>${gameCase.playNote}</small>` : ""}
+        </div>
       </header>
 
       <div class="game-case__overview">

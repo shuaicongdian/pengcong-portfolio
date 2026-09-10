@@ -261,6 +261,9 @@ window.SITE_CONTENT = {
       subtitle: "先验证核心循环，再把玩法做深。",
       summary: "这个项目的起点不是美术和剧情，而是验证“移动走位 + 自动攻击 + 升级构筑 + 怪群压力”是否成立。AI 参与从玩法拆解、代码实现到自动测试的完整开发链路，最终形成一个可反复游玩、能够挑战 Boss 的灰盒版本。",
       status: "可玩原型已完成",
+      playUrl: "game/",
+      playLabel: "在线试玩原型",
+      playNote: "建议电脑端试玩，使用键盘操作",
       previewImage: "assets/images/greybox-survivor-preview.png",
       previewAlt: "灰盒幸存者游戏原型界面预览",
       stats: [

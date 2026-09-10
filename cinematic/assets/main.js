@@ -248,6 +248,12 @@
           ${gameCase.roles.map((role) => `<span>${role.name}</span>`).join("")}
           ${gameCase.nextSteps.map((step) => `<span>${step}</span>`).join("")}
         </div>
+        ${
+          gameCase.playUrl
+            ? `<a class="game-play-link" href="${gameCase.playUrl}" target="_blank" rel="noreferrer">${gameCase.playLabel || "在线试玩"} <span>↗</span></a>`
+            : ""
+        }
+        ${gameCase.playNote ? `<p class="game-play-note">${gameCase.playNote}</p>` : ""}
       </div>
     `;
   }

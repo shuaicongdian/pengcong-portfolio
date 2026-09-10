@@ -50,7 +50,7 @@ window.SITE_CONTENT = {
       date: "2022.09 — 2026.06",
       courses: "传播学概论 / 新闻学原理 / 新媒体内容策划 / 视听语言 / 影视剪辑",
       honors: [
-        "大学生计算机设计大赛纪录片组湖北省一等奖",
+        "大学生计算机设计大赛湖北省一等奖",
         "学生广告设计大赛短片组优胜奖"
       ]
     }
@@ -136,16 +136,16 @@ window.SITE_CONTENT = {
     intro: "首版先呈现已从简历中确认的代表案例。后续可继续补充视频链接、封面、投放截图与更完整的项目复盘。",
     items: [
       {
-        type: "纪录片 / 毕业设计",
+        type: "微电影 / 毕业设计",
         title: "《木兰》",
-        summary: "以纪录片语言完成人物叙事，获得大学生计算机设计大赛纪录片组湖北省一等奖。",
+        summary: "以微电影剧情片形式完成人物叙事，获得大学生计算机设计大赛湖北省一等奖。",
         tags: ["选题策划", "视听叙事", "影视剪辑"],
         result: "湖北省一等奖 · 14:49",
         coverClass: "work-cover--mulan",
-        image: "assets/images/mulan-still-563s.jpg",
-        imageAlt: "纪录片《木兰》人物剧照",
+        image: "assets/images/mulan-still-0011.jpg",
+        imageAlt: "《木兰》微电影剧照",
         videoUrl: "assets/videos/mulan-web-720p.m4v",
-        posterUrl: "assets/images/mulan-still-563s.jpg",
+        posterUrl: "assets/images/mulan-still-0011.jpg",
         videoLabel: "站内观看全片",
         link: "https://www.bilibili.com/video/BV1JbRpBPEWN/",
         linkLabel: "Bilibili",
@@ -180,26 +180,22 @@ window.SITE_CONTENT = {
   mulan: {
     kicker: "04 / SPECIAL FEATURE",
     title: "《木兰》",
-    subtitle: "纪录片 · 14 分 49 秒",
-    intro: "以纪录片语言完成人物叙事，保留真实生活质感与克制的情感表达。作品获得大学生计算机设计大赛纪录片组湖北省一等奖。",
+    subtitle: "微电影剧情片 · 14 分 49 秒",
+    intro: "以微电影剧情片形式完成人物叙事，保留真实生活质感与克制的情感表达。作品获得大学生计算机设计大赛湖北省一等奖。",
     videoUrl: "assets/videos/mulan-web-720p.m4v",
-    posterUrl: "assets/images/mulan-gallery-04-0563.jpg",
+    posterUrl: "assets/images/mulan-still-0011.jpg",
     bilibili: "https://www.bilibili.com/video/BV1JbRpBPEWN/",
     stats: [
       { value: "14:49", label: "片长", note: "纪录长片" },
       { value: "1920×1080", label: "画面规格", note: "Full HD" },
-      { value: "一等奖", label: "省级奖项", note: "纪录片组" },
+      { value: "一等奖", label: "省级奖项", note: "微电影剧情片" },
       { value: "2026", label: "毕业设计", note: "广播电视编导" }
     ],
     stills: [
-      { src: "assets/images/mulan-gallery-01-0053.jpg", alt: "《木兰》多人场景剧照", time: "00:53" },
-      { src: "assets/images/mulan-gallery-02-0158.jpg", alt: "《木兰》人物近景剧照", time: "02:38" },
-      { src: "assets/images/mulan-gallery-03-0278.jpg", alt: "《木兰》室内场景剧照", time: "04:38" },
-      { src: "assets/images/mulan-gallery-04-0563.jpg", alt: "《木兰》人物环境剧照", time: "09:23" },
-      { src: "assets/images/mulan-gallery-05-0653.jpg", alt: "《木兰》光影场景剧照", time: "10:53" },
-      { src: "assets/images/mulan-gallery-06-0773.jpg", alt: "《木兰》人物场景剧照", time: "12:53" },
-      { src: "assets/images/mulan-gallery-07-0818.jpg", alt: "《木兰》高对比画面剧照", time: "13:38" },
-      { src: "assets/images/mulan-gallery-08-0848.jpg", alt: "《木兰》结尾氛围剧照", time: "14:08" }
+      { src: "assets/images/mulan-still-0011.jpg", alt: "《木兰》微电影剧照 11 秒", time: "00:11" },
+      { src: "assets/images/mulan-still-0311.jpg", alt: "《木兰》微电影剧照 5分11秒", time: "05:11" },
+      { src: "assets/images/mulan-still-0417.jpg", alt: "《木兰》微电影剧照 6分57秒", time: "06:57" },
+      { src: "assets/images/mulan-still-0818.jpg", alt: "《木兰》微电影剧照 13分38秒", time: "13:38" }
     ]
   },
   aiProjects: {

@@ -1086,6 +1086,42 @@ h4 {
   border-bottom: 1px solid var(--ink);
 }
 
+.work-cover__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.78) contrast(1.06) brightness(0.92);
+  transition: transform 700ms var(--ease), filter 400ms ease;
+}
+
+.work-card:hover .work-cover__image {
+  filter: saturate(0.92) contrast(1.05) brightness(0.96);
+  transform: scale(1.025);
+}
+
+.work-cover--with-image::before {
+  display: none;
+}
+
+.work-cover--with-image::after {
+  inset: 0;
+  width: auto;
+  height: auto;
+  background:
+    linear-gradient(180deg, rgba(10, 15, 16, 0.08), rgba(10, 15, 16, 0.5)),
+    linear-gradient(90deg, rgba(10, 15, 16, 0.32), transparent 58%);
+  transform: none;
+}
+
+.work-cover--with-image .work-cover__label,
+.work-cover--with-image .work-cover__index {
+  color: var(--white);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+
 .work-card--featured .work-card__cover {
   min-height: 350px;
 }

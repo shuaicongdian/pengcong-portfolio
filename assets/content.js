@@ -2,11 +2,11 @@ window.SITE_CONTENT = {
   person: {
     name: "彭聪",
     englishName: "PENG CONG",
-    role: "信息流编导",
+    role: "编导",
     availability: "现居北京 · 可到岗",
     phone: "156 2311 8896",
     email: "3262348049@qq.com",
-    resumeUrl: "assets/resume/彭聪-信息流编导-简历.docx"
+    resumeUrl: "assets/resume/彭聪-编导-简历.docx"
   },
   nav: [
     { label: "关于", href: "#about" },
@@ -17,7 +17,7 @@ window.SITE_CONTENT = {
     { label: "联系", href: "#contact" }
   ],
   hero: {
-    eyebrow: "短视频内容 / 千川信息流",
+    eyebrow: "短视频内容 / 编导",
     headline: "把用户痛点，变成愿意看完的内容。",
     intro: "广播电视编导本科，具备短视频编导、内容运营与外包项目管理复合经验。擅长从选题洞察、脚本结构到拍摄统筹、数据复盘，让内容不止“好看”，更能服务增长。",
     primaryCta: "查看代表经历",
@@ -325,7 +325,7 @@ window.SITE_CONTENT = {
   contact: {
     kicker: "06 / CONTACT",
     title: "有合适的内容项目，\n聊聊怎么把它做出来。",
-    text: "目前关注信息流编导、短视频内容策划与账号内容运营方向。欢迎通过邮箱或电话联系。",
+    text: "目前关注编导、短视频内容策划与账号内容运营方向。欢迎通过邮箱或电话联系。",
     emailLabel: "发送邮件",
     phoneLabel: "电话联系",
     resumeLabel: "下载简历"

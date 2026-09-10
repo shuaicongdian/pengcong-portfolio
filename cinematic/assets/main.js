@@ -12,7 +12,7 @@
     });
   };
 
-  const { person, hero, works, aiProjects, skills, contact, footer } = content;
+  const { person, hero, works, mulan, aiProjects, skills, contact, footer } = content;
 
   setText("[data-person-name]", person.name);
   setText("[data-person-role]", person.role);
@@ -25,6 +25,9 @@
   setText("[data-work-kicker]", works.kicker);
   setText("[data-work-title]", works.title);
   setText("[data-work-intro]", works.intro);
+  setText("[data-mulan-kicker]", mulan.kicker);
+  setText("[data-mulan-title]", mulan.title);
+  setText("[data-mulan-subtitle]", mulan.subtitle);
   setText("[data-ai-kicker]", aiProjects.kicker);
   setText("[data-ai-title]", aiProjects.title);
   setText("[data-ai-intro]", aiProjects.intro);
@@ -157,6 +160,48 @@
         `;
       })
       .join("");
+  }
+
+  const mulanFeature = $("[data-mulan]");
+  if (mulanFeature) {
+    mulanFeature.innerHTML = `
+      <div class="mulan-hero">
+        <figure class="mulan-hero__image">
+          <img src="${mulan.posterUrl}" alt="${mulan.title}剧照" />
+          <figcaption><span>SELECTED STILL</span><span>09:23</span></figcaption>
+        </figure>
+        <div class="mulan-hero__copy">
+          <p class="mulan-hero__label">DOCUMENTARY / 14:49</p>
+          <h3>${mulan.title}</h3>
+          <p>${mulan.intro}</p>
+          <div class="mulan-stats">
+            ${mulan.stats.map((stat) => `
+              <div>
+                <strong>${stat.value}</strong>
+                <span>${stat.label}</span>
+                <small>${stat.note}</small>
+              </div>
+            `).join("")}
+          </div>
+          <a class="mulan-link" href="${mulan.bilibili}" target="_blank" rel="noreferrer">在 Bilibili 观看全片 ↗</a>
+        </div>
+      </div>
+
+      <div class="mulan-stills">
+        <div class="mulan-stills__head">
+          <span>FILM STILLS</span>
+          <span>${String(mulan.stills.length).padStart(2, "0")} FRAMES</span>
+        </div>
+        <div class="mulan-stills__grid">
+          ${mulan.stills.map((still, index) => `
+            <a class="mulan-photo mulan-photo--${(index % 5) + 1}" href="${still.src}" target="_blank" rel="noreferrer">
+              <img src="${still.src}" alt="${still.alt}" loading="lazy" />
+              <span>${String(index + 1).padStart(2, "0")} / ${still.time}</span>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    `;
   }
 
   const videoCase = aiProjects.videoCase;

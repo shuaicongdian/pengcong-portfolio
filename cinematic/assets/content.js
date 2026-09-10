@@ -12,6 +12,7 @@ window.SITE_CONTENT = {
     { label: "关于", href: "#about" },
     { label: "经历", href: "#experience" },
     { label: "作品", href: "#work" },
+    { label: "木兰", href: "#mulan" },
     { label: "AI项目", href: "#ai" },
     { label: "能力", href: "#skills" },
     { label: "联系", href: "#contact" }
@@ -175,8 +176,32 @@ window.SITE_CONTENT = {
       }
     ]
   },
+  mulan: {
+    kicker: "04 / SPECIAL FEATURE",
+    title: "《木兰》",
+    subtitle: "纪录片 · 14 分 49 秒",
+    intro: "以纪录片语言完成人物叙事，保留真实生活质感与克制的情感表达。作品获得大学生计算机设计大赛纪录片组湖北省一等奖。",
+    posterUrl: "../assets/images/mulan-gallery-04-0563.jpg",
+    bilibili: "https://www.bilibili.com/video/BV1JbRpBPEWN/",
+    stats: [
+      { value: "14:49", label: "片长", note: "纪录长片" },
+      { value: "1920×1080", label: "画面规格", note: "Full HD" },
+      { value: "一等奖", label: "省级奖项", note: "纪录片组" },
+      { value: "2026", label: "毕业设计", note: "广播电视编导" }
+    ],
+    stills: [
+      { src: "../assets/images/mulan-gallery-01-0053.jpg", alt: "《木兰》多人场景剧照", time: "00:53" },
+      { src: "../assets/images/mulan-gallery-02-0158.jpg", alt: "《木兰》人物近景剧照", time: "02:38" },
+      { src: "../assets/images/mulan-gallery-03-0278.jpg", alt: "《木兰》室内场景剧照", time: "04:38" },
+      { src: "../assets/images/mulan-gallery-04-0563.jpg", alt: "《木兰》人物环境剧照", time: "09:23" },
+      { src: "../assets/images/mulan-gallery-05-0653.jpg", alt: "《木兰》光影场景剧照", time: "10:53" },
+      { src: "../assets/images/mulan-gallery-06-0773.jpg", alt: "《木兰》人物场景剧照", time: "12:53" },
+      { src: "../assets/images/mulan-gallery-07-0818.jpg", alt: "《木兰》高对比画面剧照", time: "13:38" },
+      { src: "../assets/images/mulan-gallery-08-0848.jpg", alt: "《木兰》结尾氛围剧照", time: "14:08" }
+    ]
+  },
   aiProjects: {
-    kicker: "04 / AI LAB",
+    kicker: "05 / AI LAB",
     title: "用 AI 把想法，\n做成完整作品。",
     intro: "从 AI 视频生成到独立游戏开发，我把 AI 放进策划、生产、实现与迭代的完整流程，而不是只把它当作单点效率工具。",
     projects: [
@@ -285,7 +310,7 @@ window.SITE_CONTENT = {
     }
   },
   skills: {
-    kicker: "05 / CAPABILITIES",
+    kicker: "06 / CAPABILITIES",
     title: "从内容判断，到项目交付。",
     groups: [
       {
@@ -325,7 +350,7 @@ window.SITE_CONTENT = {
     ]
   },
   contact: {
-    kicker: "06 / CONTACT",
+    kicker: "07 / CONTACT",
     title: "有合适的内容项目，\n聊聊怎么把它做出来。",
     text: "目前关注编导、短视频内容策划与账号内容运营方向。欢迎通过邮箱或电话联系。",
     emailLabel: "发送邮件",

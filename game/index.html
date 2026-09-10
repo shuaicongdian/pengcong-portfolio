@@ -117,7 +117,7 @@ body {
 					const url = new URL(requestUrl, window.location.href);
 					if (url.pathname.endsWith("/game/index.wasm")) {
 						if (typeof DecompressionStream === "undefined") {
-							throw new Error("当前浏览器不支持游戏资源解压，请更新浏览器后重试。");
+							return nativeFetch(input, init);
 						}
 						const compressedUrl = new URL(url.href + ".gz");
 						const response = await nativeFetch(compressedUrl, init);

@@ -175,16 +175,23 @@
           </span>
         `;
 
+        const image = item.image
+          ? `<img class="work-cover__image" src="${item.image}" alt="${item.imageAlt || item.title}" />`
+          : "";
+        const imageClass = item.image ? " work-cover--with-image" : "";
+
         const cover = item.videoUrl
           ? `
-              <button class="work-card__cover work-cover ${item.coverClass} work-cover--video" type="button" data-video-open="${index}" aria-label="播放${item.title}">
+              <button class="work-card__cover work-cover ${item.coverClass}${imageClass} work-cover--video" type="button" data-video-open="${index}" aria-label="播放${item.title}">
+                ${image}
                 <span class="work-cover__label">${item.type}</span>
                 <span class="work-cover__index">${String(index + 1).padStart(2, "0")}</span>
                 ${playIcon}
               </button>
             `
           : `
-              <div class="work-card__cover work-cover ${item.coverClass}">
+              <div class="work-card__cover work-cover ${item.coverClass}${imageClass}">
+                ${image}
                 <span class="work-cover__label">${item.type}</span>
                 <span class="work-cover__index">${String(index + 1).padStart(2, "0")}</span>
               </div>

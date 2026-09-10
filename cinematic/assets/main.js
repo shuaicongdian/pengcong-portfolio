@@ -133,10 +133,9 @@
   if (workList) {
     workList.innerHTML = works.items
       .map((item, index) => {
-        const image =
-          index === 0
-            ? `<img src="../assets/images/mulan-poster.svg" alt="纪录片《木兰》视觉封面" />`
-            : "";
+        const image = item.image
+          ? `<img src="${item.image}" alt="${item.imageAlt || item.title}" />`
+          : "";
         const external = item.link
           ? `<a href="${item.link}" target="_blank" rel="noreferrer">${item.linkLabel || "查看作品"} ↗</a>`
           : `<span>内容案例</span>`;
